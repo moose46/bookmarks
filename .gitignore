@@ -3,3 +3,5 @@ db*
 .env
 account/migrations/*
 .gitignore
+client_secret*
+cert*
