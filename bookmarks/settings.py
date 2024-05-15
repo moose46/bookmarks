@@ -36,7 +36,10 @@ SECRET_KEY = "django-insecure-n6jbyyjc2_^%dut&pc^t$a(ckg022m3h=e#u2i@53ujseuw8g)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "account.authentication.EmailAuthBackEnd",
+]
 
 # Application definition
 
@@ -49,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",
+    "social_django",
 ]
 
 MIDDLEWARE = [
