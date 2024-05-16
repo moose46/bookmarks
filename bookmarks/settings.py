@@ -48,6 +48,11 @@ SECRET_KEY = "django-insecure-n6jbyyjc2_^%dut&pc^t$a(ckg022m3h=e#u2i@53ujseuw8g)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+if DEBUG:
+    import mimetypes
+
+    mimetypes.add_type("application/javascript", "js", True)
+    mimetypes.add_type("text/css", ".css", True)
 
 ALLOWED_HOSTS = ["mysite.com", "localhost", "127.0.0.1"]
 AUTHENTICATION_BACKENDS = [
@@ -68,6 +73,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",
     "social_django",
+    "images.apps.ImagesConfig",
+    "easy_thumbnails",
 ]
 
 MIDDLEWARE = [

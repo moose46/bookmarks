@@ -2,6 +2,7 @@
 db*
 .env
 account/migrations/*
-.gitignore
 client_secret*
 cert*
+*.jpg
+images/migrations

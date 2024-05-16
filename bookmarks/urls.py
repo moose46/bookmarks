@@ -25,6 +25,7 @@ urlpatterns = [
     path("account/", include("account.urls")),
     # edit etc\hosts and add 127.0.0.1 mysite.com
     path("social-auth/", include("social_django.urls", namespace="social")),
+    path("images/", include("images.urls", namespace="images")),
 ]
 if settings.DEBUG:
     urlpatterns += static(
